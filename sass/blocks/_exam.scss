@@ -1,0 +1,172 @@
+/* exam */
+
+.exam {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.exam__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.exam__title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.exam__btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: #1D93FF;
+    display: flex;
+    align-items: center;
+}
+
+.exam__btn-text {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.exam__btn-plus {
+    font-size: 24px;
+}
+
+.exam__bottom {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.exam__form-title {
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.exam__form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.exam__form-wrapper:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.exam__form-label {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.exam__form-input {
+    max-width: 300px;
+    width: 100%;
+    color: #000;
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid #CED4DA;
+}
+
+.exam__form-input::placeholder {
+    color: #6C757D;
+    font-size: 16px;
+    font-weight: 500;
+} 
+
+.exam__form-input--active {
+    max-width: 134px;
+}
+
+.exam__form-input--active:first-child {
+    margin-right: 32px;
+}
+
+.exam__form-input-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.exam__form-btn {
+    max-width: 300px;
+    width: 100%;
+    margin-top: 18px;
+}
+
+.exam__right {
+    max-width: 970px;
+    width: 100%;
+}
+
+.exam__right-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.exam__right-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.exam__right-top-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.exam__right-top-text {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.exam__right-top-text:first-child {
+    margin-right: 20px;
+}
+
+.exam__table {
+    border-collapse: collapse;
+    max-width: 970px;
+    width: 100%;
+}
+
+.exam__tr th {
+    padding: 10px;
+}
+
+.exam__tr td {
+    padding: 10px;
+}
+
+.exam__tr td:nth-child(3) {
+    font-weight: 400;
+}
+
+.exam__tbody .exam__tr:nth-child(odd) {
+    border-bottom: 1px solid #DEE2E6;
+    background: #F2F2F2;
+}
+
+.exam__btn-edit {
+    border: none;
+    padding: 0;
+    width: 34px;
+    height: 34px;
+    background-color: transparent;   
+}
+
+.exam__btn-delete {
+    border: none;
+    padding: 0;
+    width: 34px;
+    height: 34px;
+    background-color: transparent;
+}
+
+.exam__status {
+    color: green;
+}

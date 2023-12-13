@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam results</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <section class="exam">
+        <div class="container">
+            <div class="exam__top">
+                <h2 class="exam__title">Exam results</h2>
+                <button class="exam__btn js-btn">
+                    <span class="exam__btn-text">Add new student</span>
+                    <span class="exam__btn-plus">+</span>
+                </button>
+            </div>
+            <div class="exam__bottom">
+                <form class="exam__form" action="#" method="get">
+                    <h3 class="exam__form-title">Filter</h3>
+                    <div class="exam__form-wrapper">
+                        <label class="exam__form-label" for="search">Search</label>
+                        <input class="exam__form-input" type="text" name="search" id="search" placeholder="Name">
+                    </div>
+                    <div class="exam__form-wrapper">
+                        <label class="exam__form-label" for="from">Mark</label>
+                        <div class="exam__form-input-wrapper">
+                            <input class="exam__form-input exam__form-input--active" type="number" name="from" id="from" placeholder="From">
+                            <input class="exam__form-input exam__form-input--active" type="number" name="to" id="to" placeholder="To">
+                        </div>
+                    </div>
+                    <div class="exam__form-wrapper">
+                        <label class="exam__form-label">Sort by</label>
+                        <select class="exam__form-input" name="select" id="select">
+                            <option value="name" selected>Name</option>
+                            <option value="Ibrohimjon Alimuhammedov">Ibrohimjon Alimuhammedov</option>
+                            <option value="Asadbek">Asadbek</option>
+                            <option value="Ahmadjon Hasanjanov">Ahmadjon Hasanjanov</option>
+                            <option value="Ganiyev Teshayev">Ganiyev Teshayev</option>
+                            <option value="Kamronbek Zoirov">Kamronbek Zoirov</option>
+                        </select>
+                    </div>
+                    <button class="exam__form-btn btn js-form-btn">Filter</button>
+                </form>
+                <div class="exam__right">
+                    <div class="exam__right-top">
+                        <h3 class="exam__right-title">Students list</h3>
+                        <div class="exam__right-top-wrapper">
+                            <strong class="exam__right-top-text">Count: 4</strong>
+                            <strong class="exam__right-top-text">Average mark: 65%</strong>
+                        </div>
+                    </div>
+                    <table class="exam__table">
+                        <thead class="exam_thead">
+                            <tr class="exam__tr">
+                                <th>ID</th>
+                                <th>Name & Lastname</th>
+                                <th>Marked date</th>
+                                <th>Mark</th>
+                                <th>Status</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody class="exam__tbody">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------modal----------------- -->
+    <div class="modal__wrapper">
+        <div class="modal">
+            <div class="modal__top">
+                <strong class="modal__title">Add student</strong>
+                <button class="modal__btn-close">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <form class="modal__form" action="#" method="get">
+                <div class="modal__form-wrapper">
+                    <label class="modal__form-label" for="name">Name</label>
+                    <input class="modal__form-input" type="text" name="name" id="name" placeholder="Name">
+                </div>
+                <div class="modal__form-wrapper">
+                    <label class="modal__form-label" for="LastName">Lastname</label>
+                    <input class="modal__form-input" type="text" name="LastName" id="LastName" placeholder="Lastname">
+                </div>
+                <div class="modal__form-wrapper">
+                    <label class="modal__form-label" for="Mark">Mark</label>
+                    <input class="modal__form-input" type="number" name="Mark" id="Mark" placeholder="id">
+                </div>
+                <button class="modal__btn btn">Add student</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ---------edit-modal---------- -->
+    <div class="edit-modal__wrapper">
+        <div class="edit-modal">
+            <div class="edit-modal__top">
+                <strong class="edit-modal__title">Edit student</strong>
+                <button class="edit-modal__btn-close">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <form class="edit-modal__form" action="#" method="get">
+                <div class="edit-modal__form-wrapper">
+                    <label class="edit-modal__form-label" for="editName">Name</label>
+                    <input class="edit-modal__form-input input-name" type="text" name="editName" id="editName" placeholder="Name">
+                </div>
+                <div class="edit-modal__form-wrapper">
+                    <label class="edit-modal__form-label" for="editLastname">Lastname</label>
+                    <input class="edit-modal__form-input input-lastname" type="text" name="editLastname" id="editLastname" placeholder="Lastname">
+                </div>
+                <div class="edit-modal__form-wrapper">
+                    <label class="edit-modal__form-label" for="editMark">Mark</label>
+                    <input class="edit-modal__form-input input-mark" type="number" name="editMark" id="editMark" placeholder="id">
+                </div>
+                <button class="edit-modal__btn btn">Edit student</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- template -->
+    <template id="template-tr">
+        <tr class="exam__tr">
+            <td class="td-id"></td>
+            <td class="td-name"></td>
+            <td class="td-marked-date"></td>
+            <td class="td-mark"></td>
+            <td class="exam__status td-status"></td>
+            <td class="td-edit"><button class="exam__btn-edit js-edit-btn"><img src="img/icon/edit.svg" alt="Edit" width="34" height="34"></button></td>
+            <td class="td-delete"><button class="exam__btn-delete "><img class="js-delete-btn" src="img/icon/delete.svg" alt="Delete"></button></td>
+        </tr>
+    </template>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
